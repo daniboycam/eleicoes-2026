@@ -173,7 +173,7 @@ export default async function CandidatoPage({ params }: { params: Promise<{ id: 
                   color: "#fff",
                 }}
               >
-                📄 Baixar Plano de Governo Oficial (PDF)
+                Baixar Plano de Governo Oficial (PDF)
               </a>
             )}
 

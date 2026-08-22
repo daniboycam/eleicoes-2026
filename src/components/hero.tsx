@@ -16,17 +16,8 @@ export function Hero({
   return (
     <section
       id="inicio"
-      className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white min-h-screen flex items-center overflow-hidden"
+      className="relative bg-slate-900 text-white min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 text-9xl">🗳️</div>
-        <div className="absolute bottom-20 right-10 text-9xl">🇧🇷</div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] opacity-5">
-          ⚖️
-        </div>
-      </div>
-
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <span className="inline-block bg-blue-500/20 border border-blue-400/30 backdrop-blur-sm text-blue-300 text-sm font-medium px-5 py-2 rounded-full mb-8">

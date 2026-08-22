@@ -130,9 +130,10 @@ export function Candidatos({ dadosCandidatos, fotoFolder = "fotos" }: { dadosCan
                     {c.propostas.map((p: any) => (
                       <span
                         key={p.tema}
-                        className="proposal-tag bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300"
+                        title={p.tema}
+                        className="proposal-tag bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 text-lg px-2 py-1"
                       >
-                        {p.icone} {p.tema}
+                        {p.icone}
                       </span>
                     ))}
                 </div>
