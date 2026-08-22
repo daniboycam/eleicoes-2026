@@ -35,19 +35,26 @@ export default function DebatePage() {
   }, [messages]);
 
   const customHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (selectedIds.length < 2) {
-      alert("Por favor, selecione pelo menos 2 candidatos para que haja um debate.");
-      return;
-    }
-    if (!input.trim()) return;
-    
-    // Explicitly pass options to ensure latest state is sent
-    handleSubmit(e, {
-      body: {
-        selectedIds
+    e.preventDefault(); // Garante que o form nativo não vai submeter e recarregar a página
+
+    try {
+      if (selectedIds.length < 2) {
+        alert("Por favor, selecione pelo menos 2 candidatos para que haja um debate.");
+        return;
       }
-    });
+      if (!input.trim()) return;
+      
+      console.log("Iniciando debate com candidatos:", selectedIds, "e tema:", input);
+
+      handleSubmit(e, {
+        body: {
+          selectedIds
+        }
+      });
+    } catch (err: any) {
+      console.error("Erro no customHandleSubmit:", err);
+      alert("Ocorreu um erro no frontend: " + err.message);
+    }
   };
 
   return (
