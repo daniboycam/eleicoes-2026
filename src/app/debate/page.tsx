@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "ai/react";
@@ -11,7 +11,7 @@ export default function DebatePage() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: "/api/debate",
     body: {
       selectedIds
@@ -41,7 +41,13 @@ export default function DebatePage() {
       return;
     }
     if (!input.trim()) return;
-    handleSubmit(e);
+    
+    // Explicitly pass options to ensure latest state is sent
+    handleSubmit(e, {
+      body: {
+        selectedIds
+      }
+    });
   };
 
   return (
@@ -123,6 +129,13 @@ export default function DebatePage() {
                     <div className="flex justify-start">
                       <div className="bg-slate-200 dark:bg-slate-700 text-slate-500 rounded-2xl rounded-bl-none p-4 max-w-[80%] animate-pulse">
                         Os candidatos estão debatendo...
+                      </div>
+                    </div>
+                  )}
+                  {error && (
+                    <div className="flex justify-center my-4">
+                      <div className="bg-red-100 text-red-600 px-4 py-2 rounded-lg text-sm max-w-[80%] text-center">
+                        Ocorreu um erro: {error.message || "Falha na comunicação com a IA"}
                       </div>
                     </div>
                   )}

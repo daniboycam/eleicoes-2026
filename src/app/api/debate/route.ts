@@ -1,4 +1,4 @@
-﻿import { google } from "@ai-sdk/google";
+import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
 import { candidatos } from "../../../data/candidatos";
 
@@ -39,16 +39,16 @@ ${dadosContexto}
 `;
 
     const result = await streamText({
-      model: google("models/gemini-3.6-flash"),
+      model: google("gemini-3.6-flash"),
       system: systemPrompt,
       messages,
       temperature: 0.7,
     });
 
     return result.toDataStreamResponse();
-  } catch (error) {
+  } catch (error: any) {
     console.error("Erro na API de debate:", error);
-    return new Response(JSON.stringify({ error: "Ocorreu um erro no servidor" }), {
+    return new Response(JSON.stringify({ error: error.message || "Erro desconhecido", stack: error.stack }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
     });
