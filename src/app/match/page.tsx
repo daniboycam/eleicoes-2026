@@ -96,19 +96,19 @@ export default function MatchEleitoral() {
                 onClick={() => handleAnswer(1)}
                 className="w-full py-4 px-6 rounded-2xl bg-green-600 hover:bg-green-700 text-white font-bold text-lg transition-transform hover:scale-[1.02]"
               >
-                👍 Concordo plenamente
+                👍 Concordo
               </button>
               <button
                 onClick={() => handleAnswer(0)}
                 className="w-full py-4 px-6 rounded-2xl bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 font-bold text-lg transition-transform hover:scale-[1.02]"
               >
-                😶 Neutro / Pular
+                😶 Concordo em partes
               </button>
               <button
                 onClick={() => handleAnswer(-1)}
                 className="w-full py-4 px-6 rounded-2xl bg-red-600 hover:bg-red-700 text-white font-bold text-lg transition-transform hover:scale-[1.02]"
               >
-                👎 Discordo totalmente
+                👎 Discordo
               </button>
             </div>
           </div>
