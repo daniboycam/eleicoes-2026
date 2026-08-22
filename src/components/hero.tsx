@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Hero({
   title = "Eleições Presidenciais",
   description = "Compare as propostas de governo dos principais candidatos à Presidência da República, baseadas nos planos oficiais registrados no",
@@ -21,14 +23,14 @@ export function Hero({
         <div className="absolute top-20 left-10 text-9xl">🗳️</div>
         <div className="absolute bottom-20 right-10 text-9xl">🇧🇷</div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] opacity-5">
-          🏛️
+          ⚖️
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <span className="inline-block bg-blue-500/20 border border-blue-400/30 backdrop-blur-sm text-blue-300 text-sm font-medium px-5 py-2 rounded-full mb-8">
-            📅 1º Turno: 4 de outubro de 2026
+            🗓️ 1º Turno: 4 de outubro de 2026
           </span>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
@@ -47,6 +49,12 @@ export function Hero({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/match"
+              className="bg-green-600 hover:bg-green-700 hover:scale-105 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-green-500/25 flex items-center gap-2"
+            >
+              🔥 Quem é seu Candidato?
+            </Link>
             <a
               href="#candidatos"
               className="bg-blue-600 hover:bg-blue-700 hover:scale-105 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/25"
