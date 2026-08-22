@@ -125,19 +125,6 @@ export function Candidatos({ dadosCandidatos, fotoFolder = "fotos" }: { dadosCan
                   &ldquo;{c.destaque}&rdquo;
                 </p>
 
-                {/* Proposal Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {c.propostas.map((p: any) => (
-                      <span
-                        key={p.tema}
-                        title={p.tema}
-                        className="proposal-tag bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 text-lg px-2 py-1"
-                      >
-                        {p.icone}
-                      </span>
-                    ))}
-                </div>
-
                 {/* Expand Button */}
                 <button
                   onClick={() => toggleExpand(c.id)}
