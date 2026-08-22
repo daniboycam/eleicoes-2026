@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -41,7 +42,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-blue-500 ${
-                  scrolled ? "text-slate-600" : "text-slate-300"
+                  scrolled ? "text-slate-600 dark:text-slate-300" : "text-slate-300"
                 }`}
               >
                 {link.label}
@@ -49,6 +50,7 @@ export function Navbar() {
             </li>
           ))}
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <li>
               <a
                 href="https://www.tse.jus.br/servicos-eleitorais/titulo-e-local-de-votacao/consulta-por-nome"
@@ -80,17 +82,17 @@ export function Navbar() {
           <div className="flex flex-col gap-1.5">
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-slate-700" : "bg-white"
+                scrolled ? "bg-slate-700" : "bg-white dark:bg-slate-800"
               } ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-slate-700" : "bg-white"
+                scrolled ? "bg-slate-700" : "bg-white dark:bg-slate-800"
               } ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-slate-700" : "bg-white"
+                scrolled ? "bg-slate-700" : "bg-white dark:bg-slate-800"
               } ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </div>
@@ -108,7 +110,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-slate-700 font-medium hover:text-blue-600 transition-colors"
+                className="text-slate-700 dark:text-slate-300 font-medium hover:text-blue-600 transition-colors"
               >
                 {link.label}
               </a>

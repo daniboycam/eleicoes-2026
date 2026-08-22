@@ -31,13 +31,13 @@ export function Calendario({ activeTab }: { activeTab: "presidencia" | "governad
   ];
 
   return (
-    <section id="calendario" className="py-20 bg-slate-50">
+    <section id="calendario" className="py-20 bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-blue-600 text-sm font-semibold uppercase tracking-widest">
             Datas Importantes
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold mt-2 text-slate-900">
+          <h2 className="text-4xl lg:text-5xl font-bold mt-2 text-slate-900 dark:text-white">
             Calendário Eleitoral
           </h2>
         </div>
@@ -68,8 +68,8 @@ export function Calendario({ activeTab }: { activeTab: "presidencia" | "governad
                   <div
                     className={`flex-1 rounded-2xl p-6 border transition-all duration-300 hover:shadow-md ${
                       evento.passado
-                        ? "bg-white border-green-200"
-                        : "bg-white border-blue-200 shadow-sm"
+                        ? "bg-white dark:bg-slate-800 border-green-200"
+                        : "bg-white dark:bg-slate-800 border-blue-200 shadow-sm"
                     }`}
                   >
                     <div className="flex items-center gap-3 mb-2">
@@ -96,7 +96,7 @@ export function Calendario({ activeTab }: { activeTab: "presidencia" | "governad
                     <h3 className="text-lg font-bold text-slate-800">
                       {evento.titulo}
                     </h3>
-                    <p className="text-sm text-slate-500 mt-1">
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                       {evento.descricao}
                     </p>
                   </div>

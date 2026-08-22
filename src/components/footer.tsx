@@ -72,11 +72,11 @@ export function Footer() {
 
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               &copy; 2026 — Projeto informativo sem vínculo partidário.
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-xs text-slate-500 bg-slate-800 px-3 py-1.5 rounded-full">
+              <span className="text-xs text-slate-500 dark:text-slate-400 bg-slate-800 px-3 py-1.5 rounded-full">
                 ⚠️ Este site não possui afiliação com partidos políticos ou candidatos
               </span>
             </div>
