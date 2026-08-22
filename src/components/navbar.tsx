@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Candidatos", href: "#candidatos" },
-  { label: "Comparativo", href: "#comparativo" },
-  { label: "Calendário", href: "#calendario" },
+  { label: "Início", href: "/" },
+  { label: "Candidatos", href: "/#candidatos" },
+  { label: "Comparativo", href: "/#comparativo" },
+  { label: "Calendário", href: "/#calendario" },
 ];
 
 export function Navbar() {
@@ -29,24 +30,24 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <a
-          href="#inicio"
+        <Link
+          href="/"
           className="flex items-center gap-2 transition-transform hover:scale-105 bg-white/90 rounded-md px-2 py-1 shadow-sm"
         >
           <img src="/logo.png" alt="Eleições 2026 #VOTONADEMOCRACIA" className="h-8 w-auto object-contain" />
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-blue-500 ${
                   scrolled ? "text-slate-600 dark:text-slate-300" : "text-slate-300"
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
           <div className="flex items-center gap-3">
@@ -107,13 +108,13 @@ export function Navbar() {
         <ul className="flex flex-col px-4 py-4 gap-3">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className="text-slate-700 dark:text-slate-300 font-medium hover:text-blue-600 transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
           <div className="flex flex-col gap-2 mt-2">
