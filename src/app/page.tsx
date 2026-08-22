@@ -70,7 +70,7 @@ export default function Home() {
 
       <Candidatos dadosCandidatos={dadosAtuais} fotoFolder={folderAtual} />
       <Comparativo dadosCandidatos={dadosAtuais} comparacoesData={comparacoesAtuais} temasData={temasAtuais} fotoFolder={folderAtual} />
-      <Calendario />
+      <Calendario activeTab={activeTab} />
       <Footer />
     </main>
   );

@@ -1,9 +1,11 @@
-export function Calendario() {
+export function Calendario({ activeTab }: { activeTab: "presidencia" | "governador" }) {
   const eventos = [
     {
       data: "15 de agosto",
       titulo: "Prazo final para registro de candidaturas",
-      descricao: "13 chapas registradas no TSE para a Presidência.",
+      descricao: activeTab === "presidencia" 
+        ? "13 chapas registradas no TSE para a Presidência."
+        : "11 chapas registradas no TSE para o Governo do Distrito Federal.",
       passado: true,
     },
     {
