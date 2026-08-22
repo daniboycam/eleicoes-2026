@@ -3,8 +3,8 @@ import { streamText } from "ai";
 import { candidatos } from "../../../data/candidatos";
 import { governadores } from "../../../data/governadores";
 
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
+// Edge runtime has no strict execution time limits for streaming
+export const runtime = 'edge';
 
 export async function POST(req: Request) {
   const { messages, candidatoId, isGovernor } = await req.json();
