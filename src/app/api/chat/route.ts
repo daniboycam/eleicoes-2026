@@ -31,7 +31,7 @@ Regras:
 3. Se perguntarem algo que não está no texto, diga honestamente que "O plano de governo cadastrado não traz propostas específicas sobre esse tema".
 4. Nunca critique ou elogie o candidato. Mantenha tom jornalístico/informativo.`;
 
-  const result = streamText({
+  const result = await streamText({
     model: google("gemini-1.5-flash"),
     system: systemPrompt,
     messages,
