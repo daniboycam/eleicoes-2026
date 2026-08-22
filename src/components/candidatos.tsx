@@ -63,11 +63,6 @@ export function Candidatos({ dadosCandidatos, fotoFolder = "fotos" }: { dadosCan
                     <span className="bg-white/20 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full">
                       {c.siglaPartido}
                     </span>
-                    {c.paginas && c.paginas > 0 && (
-                      <span className="text-xs text-white/70">
-                        {c.paginas} páginas
-                      </span>
-                    )}
                   </div>
                   
                   <div className="flex items-center gap-4">
