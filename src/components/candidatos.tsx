@@ -206,7 +206,8 @@ export function Candidatos({ dadosCandidatos, fotoFolder = "fotos" }: { dadosCan
                   {/* Compartilhar Link */}
                   <button
                     onClick={() => {
-                      const text = `Veja as propostas de ${c.nome} (${c.siglaPartido}) para as Eleições 2026!\nVice: ${c.vice || 'A definir'}\n\nAcesse: https://eleicoes-2026.vercel.app/candidato/${c.id}`;
+                      const baseUrl = window.location.origin;
+                      const text = `Veja as propostas de ${c.nome} (${c.siglaPartido}) para as Eleições 2026!\nVice: ${c.vice || 'A definir'}\n\nAcesse: ${baseUrl}/candidato/${c.id}`;
                       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
                     }}
                     className="flex-1 flex items-center justify-center gap-1 text-xs font-semibold py-2.5 rounded-lg border-2 border-green-200 text-green-700 bg-green-50 hover:bg-green-100 dark:bg-green-900/30 dark:border-green-800 dark:text-green-400 hover:shadow-md transition-all duration-200"
