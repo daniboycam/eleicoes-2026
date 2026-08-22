@@ -53,7 +53,7 @@ export function Hero({
               href="/match"
               className="bg-green-600 hover:bg-green-700 hover:scale-105 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-green-500/25 flex items-center gap-2"
             >
-              🔥 Quem é seu Candidato?
+              Quem é seu Candidato?
             </Link>
             <a
               href="#candidatos"

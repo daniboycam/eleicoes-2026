@@ -6,7 +6,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { label: "Início", href: "/" },
-  { label: "Match Eleitoral 🔥", href: "/match" },
+  { label: "Match Eleitoral", href: "/match" },
   { label: "Candidatos", href: "/#candidatos" },
   { label: "Comparativo", href: "/#comparativo" },
   { label: "Calendário", href: "/#calendario" },
