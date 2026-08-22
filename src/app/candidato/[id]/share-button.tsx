@@ -1,4 +1,4 @@
-"use client";
+ï»¿"use client";
 
 import { useEffect, useState } from "react";
 
@@ -12,7 +12,7 @@ export function ShareButton({ nome, siglaPartido, vice, id }: { nome: string; si
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     const url = baseUrl || "https://seusite.com";
-    const text = `Veja as propostas de ${nome} (${siglaPartido}) para as Eleições 2026!\nVice: ${vice || "A definir"}\n\nAcesse: ${url}/candidato/${id}`;
+    const text = `Veja as propostas de ${nome} (${siglaPartido}) para as EleiÃ§Ãµes 2026!\nVice: ${vice || "A definir"}\n\nAcesse: ${url}/candidato/${id}`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
   };
 
