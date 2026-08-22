@@ -1,4 +1,4 @@
-﻿import { google } from "@ai-sdk/google";
+import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
 import { candidatos } from "../../../data/candidatos";
 import { governadores } from "../../../data/governadores";
@@ -32,7 +32,7 @@ Regras:
 4. Nunca critique ou elogie o candidato. Mantenha tom jornalístico/informativo.`;
 
   const result = streamText({
-    model: google("gemini-2.5-flash"),
+    model: google("gemini-1.5-flash"),
     system: systemPrompt,
     messages,
   });
