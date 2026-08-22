@@ -3,7 +3,6 @@
 import { ultimaPesquisa, pesquisaGovernador } from "../data/pesquisas";
 import { candidatos } from "../data/candidatos";
 import { governadores } from "../data/governadores";
-import { HistoricoPesquisas } from "./historico-pesquisas";
 
 export function Pesquisas({ activeTab }: { activeTab: "presidencia" | "governador" }) {
   const pesquisaAtual = activeTab === "presidencia" ? ultimaPesquisa : pesquisaGovernador;
@@ -90,11 +89,6 @@ export function Pesquisas({ activeTab }: { activeTab: "presidencia" | "governado
             </div>
           </div>
 
-          {activeTab === "presidencia" && (
-            <div className="mt-12">
-              <HistoricoPesquisas />
-            </div>
-          )}
         </div>
       </div>
     </section>
