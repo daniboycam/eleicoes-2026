@@ -6,6 +6,7 @@ import { Navbar } from "../../../components/navbar";
 import { Footer } from "../../../components/footer";
 import Link from "next/link";
 import { ShareButton } from "./share-button";
+import { ChatCandidato } from "../../../components/chat-candidato";
 
 function getCandidato(id: string) {
   const isPresident = candidatos.find((c) => c.id === id);
@@ -126,6 +127,19 @@ export default async function CandidatoPage({ params }: { params: Promise<{ id: 
               "{c.destaque}"
             </p>
           </div>
+
+          {/* Chat IA Section */}
+          <section className="py-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl mb-12">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <h2 className="text-2xl font-bold text-center text-slate-900 dark:text-white mb-2">
+                🤖 Pergunte à IA
+              </h2>
+              <p className="text-center text-slate-600 dark:text-slate-400 mb-6 max-w-2xl mx-auto">
+                Tire suas dúvidas sobre o que <strong>{c.nome}</strong> planeja fazer. A inteligência artificial responde usando apenas os dados do plano oficial de governo registrado no TSE.
+              </p>
+              <ChatCandidato candidatoId={c.id} isGovernor={type === "governador"} cor={c.cor} />
+            </div>
+          </section>
 
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-3xl font-bold text-slate-900 dark:text-white">
