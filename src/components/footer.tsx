@@ -39,12 +39,22 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="https://www.tse.jus.br/servicos-eleitorais/titulo-e-local-de-votacao/consulta-por-nome"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-green-400 transition-colors flex items-center gap-1"
+                >
+                  📍 Consultar Local de Voto
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.tre-sp.jus.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-blue-400 transition-colors"
                 >
-                  📋 TRE — Calendário Eleitoral
+                  📌 TRE — Calendário Eleitoral
                 </a>
               </li>
             </ul>

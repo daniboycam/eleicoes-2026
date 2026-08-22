@@ -48,16 +48,28 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="https://divulgacandcontas.tse.jus.br/divulga/#/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all"
-            >
-              Portal TSE
-            </a>
-          </li>
+          <div className="flex items-center gap-3">
+            <li>
+              <a
+                href="https://www.tse.jus.br/servicos-eleitorais/titulo-e-local-de-votacao/consulta-por-nome"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all flex items-center gap-2"
+              >
+                📍 Local de Voto
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://divulgacandcontas.tse.jus.br/divulga/#/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all"
+              >
+                Portal TSE
+              </a>
+            </li>
+          </div>
         </ul>
 
         <button
@@ -102,16 +114,28 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="https://divulgacandcontas.tse.jus.br/divulga/#/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg mt-2"
-            >
-              Portal TSE
-            </a>
-          </li>
+          <div className="flex flex-col gap-2 mt-2">
+            <li>
+              <a
+                href="https://www.tse.jus.br/servicos-eleitorais/titulo-e-local-de-votacao/consulta-por-nome"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-2 justify-center"
+              >
+                📍 Consultar Local de Voto
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://divulgacandcontas.tse.jus.br/divulga/#/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg text-center"
+              >
+                Portal TSE
+              </a>
+            </li>
+          </div>
         </ul>
       </div>
     </nav>
