@@ -1,6 +1,7 @@
 "use client";
 
 import { useChat } from "ai/react";
+import ReactMarkdown from "react-markdown";
 
 export function ChatCandidato({ candidatoId, isGovernor = false, cor }: { candidatoId: string; isGovernor?: boolean; cor: string }) {
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
@@ -36,13 +37,13 @@ export function ChatCandidato({ candidatoId, isGovernor = false, cor }: { candid
         {messages.map(m => (
           <div key={m.id} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
             <div 
-              className={`max-w-[80%] p-3 rounded-2xl ${
+              className={`max-w-[80%] p-3 rounded-2xl prose dark:prose-invert ${
                 m.role === "user" 
                   ? "bg-slate-800 text-white rounded-br-none" 
                   : "bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-200 rounded-bl-none shadow-sm"
               }`}
             >
-              {m.content}
+              {m.role === "user" ? m.content : <ReactMarkdown>{m.content}</ReactMarkdown>}
             </div>
           </div>
         ))}
