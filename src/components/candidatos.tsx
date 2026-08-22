@@ -208,6 +208,7 @@ export function Candidatos({ dadosCandidatos, fotoFolder = "fotos" }: { dadosCan
                     WhatsApp
                   </button>
                 </div>
+              </div>
             </div>
           ))}
         </div>
