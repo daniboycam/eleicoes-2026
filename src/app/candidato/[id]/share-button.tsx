@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 
-export function ShareButton({ nome, siglaPartido, vice, id }: { nome: string; siglaPartido: string; vice: string; id: string }) {
+export function ShareButton({ nome, siglaPartido, vice, id }: { nome: string; siglaPartido: string; vice?: string; id: string }) {
   const [baseUrl, setBaseUrl] = useState("");
 
   useEffect(() => {
