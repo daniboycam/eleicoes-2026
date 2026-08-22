@@ -121,14 +121,14 @@ export function Candidatos({ dadosCandidatos, fotoFolder = "fotos" }: { dadosCan
 
                 {/* Proposal Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {c.propostas.map((p: any) => (
-                    <span
-                      key={p.tema}
-                      className="proposal-tag bg-slate-100 text-slate-600 dark:text-slate-300"
-                    >
-                      {p.icone} {p.tema}
-                    </span>
-                  ))}
+                    {c.propostas.map((p: any) => (
+                      <span
+                        key={p.tema}
+                        className="proposal-tag bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300"
+                      >
+                        {p.icone} {p.tema}
+                      </span>
+                    ))}
                 </div>
 
                 {/* Expand Button */}

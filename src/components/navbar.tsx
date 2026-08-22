@@ -24,7 +24,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg"
           : "bg-slate-900/80 backdrop-blur-sm"
       }`}
     >
@@ -82,17 +82,17 @@ export function Navbar() {
           <div className="flex flex-col gap-1.5">
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-slate-700" : "bg-white dark:bg-slate-800"
+                scrolled ? "bg-slate-700 dark:bg-slate-300" : "bg-white"
               } ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-slate-700" : "bg-white dark:bg-slate-800"
+                scrolled ? "bg-slate-700 dark:bg-slate-300" : "bg-white"
               } ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled ? "bg-slate-700" : "bg-white dark:bg-slate-800"
+                scrolled ? "bg-slate-700 dark:bg-slate-300" : "bg-white"
               } ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </div>
@@ -100,7 +100,7 @@ export function Navbar() {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 bg-white/95 backdrop-blur-md ${
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md ${
           menuOpen ? "max-h-80 border-t" : "max-h-0"
         }`}
       >
