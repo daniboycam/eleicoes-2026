@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Eleições 2026 — Propostas dos Candidatos à Presidência",
+  title: "Eleições 2026 — Plataforma de Propostas",
   description:
-    "Compare as propostas de governo dos principais candidatos à Presidência da República em 2026, baseadas nos planos registrados no TSE.",
+    "Compare as propostas de governo dos principais candidatos à Presidência e ao Governo em 2026, baseadas nos planos registrados no TSE.",
 };
 
 export default function RootLayout({
