@@ -34,28 +34,6 @@ export default function DebatePage() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const customHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Garante que o form nativo não vai submeter e recarregar a página
-
-    try {
-      if (selectedIds.length < 2) {
-        alert("Por favor, selecione pelo menos 2 candidatos para que haja um debate.");
-        return;
-      }
-      if (!input.trim()) return;
-      
-      console.log("Iniciando debate com candidatos:", selectedIds, "e tema:", input);
-
-      handleSubmit(e, {
-        body: {
-          selectedIds
-        }
-      });
-    } catch (err: any) {
-      console.error("Erro no customHandleSubmit:", err);
-      alert("Ocorreu um erro no frontend: " + err.message);
-    }
-  };
 
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
@@ -152,12 +130,20 @@ export default function DebatePage() {
             </div>
 
             {/* Input Form */}
-            <form onSubmit={customHandleSubmit} className="p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
+            <div className="p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
               <div className="flex items-center gap-3">
                 <input
                   type="text"
                   value={input}
                   onChange={handleInputChange}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      if (selectedIds.length >= 2 && input.trim()) {
+                        handleSubmit(undefined, { body: { selectedIds } });
+                      }
+                    }
+                  }}
                   disabled={isLoading || selectedIds.length < 2}
                   placeholder={
                     selectedIds.length < 2 
@@ -167,14 +153,20 @@ export default function DebatePage() {
                   className="flex-1 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all disabled:opacity-50"
                 />
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (selectedIds.length >= 2 && input.trim()) {
+                      handleSubmit(undefined, { body: { selectedIds } });
+                    }
+                  }}
                   disabled={isLoading || selectedIds.length < 2 || !input.trim()}
                   className="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-bold p-4 rounded-full transition-transform hover:scale-105"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                 </button>
               </div>
-            </form>
+            </div>
           </div>
 
         </div>
