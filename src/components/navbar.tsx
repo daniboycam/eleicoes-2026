@@ -30,11 +30,9 @@ export function Navbar() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <a
           href="#inicio"
-          className={`text-lg font-bold tracking-tight flex items-center gap-2 transition-colors ${
-            scrolled ? "text-slate-900" : "text-white"
-          }`}
+          className="flex items-center gap-2 transition-transform hover:scale-105 bg-white/90 rounded-md px-2 py-1 shadow-sm"
         >
-          🗳️ Eleições 2026
+          <img src="/logo.png" alt="Eleições 2026 #VOTONADEMOCRACIA" className="h-8 w-auto object-contain" />
         </a>
 
         <ul className="hidden md:flex items-center gap-6">
