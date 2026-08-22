@@ -79,7 +79,7 @@ export default async function CandidatoPage({ params }: { params: Promise<{ id: 
           <img 
             src={`/${folder}/${c.id}.jpg`} 
             alt={c.nome}
-            className="w-48 h-48 md:w-64 md:h-64 object-cover object-[50%_25%] rounded-full border-4 shadow-xl"
+            className="w-32 h-32 md:w-40 md:h-40 object-cover object-[50%_15%] rounded-full border-4 shadow-xl flex-shrink-0"
             style={{ borderColor: c.cor }}
           />
 
