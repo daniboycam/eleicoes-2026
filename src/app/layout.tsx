@@ -36,6 +36,7 @@ export const metadata: Metadata = {
 };
 
 import { ThemeProvider } from "../components/theme-provider";
+import { GlobalChat } from "@/components/global-chat";
 
 export default function RootLayout({
   children,
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased dark:bg-slate-900 dark:text-white transition-colors duration-300`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <GlobalChat />
         </ThemeProvider>
       </body>
     </html>
