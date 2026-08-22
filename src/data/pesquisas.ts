@@ -32,3 +32,20 @@ export const ultimaPesquisa: Pesquisa = {
   naoSabe: 5,
 };
 
+
+export const pesquisaGovernador: Pesquisa = {
+  instituto: "Datafolha",
+  data: "21 de Agosto de 2026",
+  registroTse: "DF-07561/2026",
+  margemErro: 3,
+  entrevistados: 910,
+  resultados: [
+    { candidatoId: "celina", percentual: 30 },
+    { candidatoId: "arruda", percentual: 28 },
+    { candidatoId: "leandro", percentual: 11 },
+    { candidatoId: "paula", percentual: 4 },
+    { candidatoId: "cappelli", percentual: 3 },
+  ],
+  brancosNulos: 11,
+  naoSabe: 8,
+};

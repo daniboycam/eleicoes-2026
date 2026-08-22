@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 import { Navbar } from "../components/navbar";
 import { Hero } from "../components/hero";
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      {activeTab === "presidencia" && <Pesquisas />}
+      <Pesquisas activeTab={activeTab} />
       <Candidatos dadosCandidatos={dadosAtuais} fotoFolder={folderAtual} />
       <Comparativo dadosCandidatos={dadosAtuais} comparacoesData={comparacoesAtuais} temasData={temasAtuais} fotoFolder={folderAtual} />
       <Calendario activeTab={activeTab} />
