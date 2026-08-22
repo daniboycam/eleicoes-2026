@@ -7,6 +7,9 @@ export function ChatCandidato({ candidatoId, isGovernor = false, cor }: { candid
     body: {
       candidatoId,
       isGovernor
+    },
+    onError: (err) => {
+      alert("Erro na IA: " + err.message);
     }
   });
 
