@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -52,8 +52,16 @@ export default function MatchEleitoral() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-24 pb-12">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-16 pb-12">
       <div className="container mx-auto px-4 max-w-2xl">
+        
+        <div className="mb-6">
+          <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors font-medium">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Voltar para a página inicial
+          </Link>
+        </div>
+
         {!showResult ? (
           <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden p-8 md:p-12 relative">
             
